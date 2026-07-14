@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Lab - Project Showcase</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: #fff;
+        }
+
+        header {
+            padding: 40px;
+            text-align: center;
+            background: #111827;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            color: #94a3b8;
+        }
+
+        .container {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 16px;
+            transition: 0.2s;
+            border: 1px solid #334155;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .tags {
+            font-size: 12px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 14px;
+            background: #2563eb;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        .github {
+            background: #334155;
+        }
+
+        .github:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🚀 JS Lab Project Showcase</h1>
+        <p>10+ JavaScript Projects with GitHub + Live Demo</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 1 -->
+        <div class="card">
+            <h3>Guess The Number Game</h3>
+            <div class="tags">JS • DOM • Game</div>
+            <div class="buttons">
+                <a class="btn github"
+                    href="https://github.com/mdnaimur/frontend-engineering-lab/tree/main/Claude_JS/phase2/numberGussing">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/Claude_JS/phase2/numberGussing/">Live
+                    Demo</a>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="card">
+            <h3>Student Management System</h3>
+            <div class="tags">Sort • Search • Reduce • Pagination </div>
+            <div class="buttons">
+                <a class="btn github"
+                    href="https://github.com/mdnaimur/frontend-engineering-lab/tree/main/Claude_JS/phase4/studdent_managment">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/Claude_JS/phase4/studdent_managment/index.html">Live
+                    Demo</a>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="card">
+            <h3>Todo apps 1</h3>
+            <div class="tags">CRUD • Element •Fucntion • form • UI</div>
+            <div class="buttons">
+                <a class="btn github"
+                    href="https://github.com/mdnaimur/frontend-engineering-lab/tree/main/Claude_JS/phase5/todo">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/Claude_JS/phase5/todo/index.html">Live
+                    Demo</a>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="card">
+            <h3>Todo Apps 2</h3>
+            <div class="tags">CRUD • Storage • UI</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/Claude_JS/phase5/todo_sumit/">Live
+                    Demo</a>
+            </div>
+        </div>
+
+
+        <!-- 4 -->
+        <div class="card">
+            <h3>Github Live Profile View by username</h3>
+            <div class="tags">Promise • API CALL • Loading..</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/project_vanilla_js/github_profile_view/">Live
+                    Demo</a>
+            </div>
+        </div>
+
+
+        <!-- 3 -->
+        <div class="card">
+            <h3>Notes App (LocalStorage)</h3>
+            <div class="tags">CRUD • Storage • UI</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn"
+                    href="https://mdnaimur.github.io/frontend-engineering-lab/project_vanilla_js/note_task/">Live
+                    Demo</a>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="card">
+            <h3>Dashboard System</h3>
+            <div class="tags">Async • UI • API</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="card">
+            <h3>Timer App</h3>
+            <div class="tags">Closure • OOP</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="card">
+            <h3>Stack Data Structure</h3>
+            <div class="tags">DSA • OOP</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="card">
+            <h3>Form Validator</h3>
+            <div class="tags">Validation • DOM</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="card">
+            <h3>Weather App</h3>
+            <div class="tags">API • Async</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="card">
+            <h3>E-commerce Cart</h3>
+            <div class="tags">State • Logic</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="card">
+            <h3>Auth System</h3>
+            <div class="tags">JWT • Security</div>
+            <div class="buttons">
+                <a class="btn github" href="#">GitHub</a>
+                <a class="btn" href="#">Live Demo</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
