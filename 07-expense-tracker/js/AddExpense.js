@@ -1,6 +1,8 @@
 import { createExpense } from './createExpense.js';
 import { saveExpense } from './state.js';
 import { helperFlash } from './utils.js';
+import { renderListModify } from './renderListModify.js'
+
 
 export function addExpense() {
     const desc = document.getElementById('desc').value.trim();
@@ -28,6 +30,8 @@ export function addExpense() {
     document.getElementById('desc').value = '';
     document.getElementById('amount').value = '';
     document.getElementById('desc').focus();
+
+    renderListModify();
 
 
 } 

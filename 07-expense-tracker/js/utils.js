@@ -28,6 +28,9 @@ export function formatDate(iso) {
 export function escHtml(str) {
     const d = document.createElement('div');
     d.textContent = str;
-    return d.innerHTMLl;
+    return d.innerHTML;
 }
 
+
+
+export const fmt = (n) => '$' + n?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
