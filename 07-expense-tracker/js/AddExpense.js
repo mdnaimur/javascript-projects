@@ -1,7 +1,9 @@
 import { createExpense } from './createExpense.js';
 import { saveExpense } from './state.js';
 import { helperFlash } from './utils.js';
-import { renderListModify } from './renderListModify.js'
+import { renderListModify } from './renderListModify.js';
+import {renderSummary} from './renderSummary.js';
+import {renderBreakdown} from './renderBreakdown.js';
 
 
 export function addExpense() {
@@ -31,6 +33,8 @@ export function addExpense() {
     document.getElementById('desc').focus();
 
     renderListModify();
+    renderBreakdown();
+    renderSummary();
 
 
 } 
