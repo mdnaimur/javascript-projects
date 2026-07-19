@@ -8,7 +8,7 @@ Each project focuses on a specific concept and is designed to improve problem-so
 
 ## 🌐 Live Demo
 
-> GitHub Pages: `https://mdnaimurr.github.io/javascript-projects/`
+> GitHub Pages: `https://mdnaimur.github.io/javascript-projects/`
 
 ---
 
@@ -22,7 +22,7 @@ Each project focuses on a specific concept and is designed to improve problem-so
 | 04  | Calculator               | Functions, Event Handling          |
 | 05  | Weather App              | Fetch API, Async/Await             |
 | 06  | GitHub Dashboard         | REST API, JSON                     |
-| 07  | Markdown Editor          | Text Processing, Live Preview      |
+| 07  | Expense Tracker          | Local Strorage, Reduce, Array,CRUD,Filter      |
 | 08  | Performance Monitor      | Performance API, Memory, Timing    |
 | 09  | Debounce & Throttle Demo | Event Optimization                 |
 | 10  | Event Loop Visualizer    | Call Stack, Event Loop             |
@@ -45,7 +45,7 @@ javascript-learning-lab/
 ├── 04-calculator/
 ├── 05-weather-app/
 ├── 06-github-dashboard/
-├── 07-markdown-editor/
+├── 07-expense-tracker/
 ├── 08-performance-monitor/
 ├── 09-debounce-throttle-demo/
 ├── 10-event-loop-visualizer/
@@ -89,7 +89,7 @@ No frameworks are used unless stated in a project.
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/javascript-learning-lab.git
+git clone https://github.com/mdnaimur/javascript-projects.git
 ```
 
 Open the project folder and run it with a local server (for example, VS Code Live Server).
