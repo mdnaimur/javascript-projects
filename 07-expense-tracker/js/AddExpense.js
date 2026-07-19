@@ -24,7 +24,6 @@ export function addExpense() {
     }
 
     const expenseData = createExpense(desc, amount, cat, date);
-    console.log(expenseData);
 
     saveExpense(expenseData);
     document.getElementById('desc').value = '';

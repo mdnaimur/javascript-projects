@@ -1,11 +1,12 @@
 import { groupByMonth } from './Calculation.js';
 import { getExpenses } from './state.js';
-import { fmt, escHtml } from './utils.js';
+import { fmt, escHtml,getMemoryUsage } from './utils.js';
 import { Categories } from './Categories.js'
+import {getFiltered} from './filters.js'
 
 export function renderListModify() {
 
-    const expenseValue = getExpenses();
+    const expenseValue = getFiltered();
     const expenseEl = document.getElementById('expenseList');
     if (!expenseEl) { return; }
 
@@ -72,5 +73,34 @@ function renderExpense(expense) {
 
         </div>
     `;
+
+}
+
+
+
+export function exportCSV(){
+    const header = 'Date,Description,Category,Amount';
+    let expenses = getExpenses();
+
+    const rows = expenses.map(e =>
+    `${e.date},"${e.desc}",${Categories[e.category].label},${e.amount.toFixed(2)}`);
+
+    const csv = [header, ...rows].join('\n');
+    const blob = new Blob([csv], {
+    type: 'text/csv'
+        });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = Object.assign(
+    document.createElement('a'),
+        {
+            href: url,
+            download: 'expenses.csv'
+        }
+    );
+    a.click();
+
+    URL.revokeObjectURL(url);
 
 }

@@ -1,5 +1,6 @@
 import { getExpenses, updateExpense } from './state.js';
 import { renderListModify } from './renderListModify.js';
+import {store} from './Store.js';
 
 export function deleteExpense(id) {
     const expense = getExpenses();
@@ -17,3 +18,14 @@ document.getElementById('expenseList').addEventListener('click', (e) => {
     if (btn) deleteExpense(parseInt(btn.dataset.id));
 
 });
+
+
+
+// clear all
+
+
+export function clearAll(){
+    if (!confirm('Delete all expenses? This cannot be undone.')) return;
+    store.set('expenses', []);
+    renderListModify();
+}

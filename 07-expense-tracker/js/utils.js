@@ -2,8 +2,6 @@
 
 export function helperFlash(id, mesg) {
 
-    console.log("helper inside, id:", id);
-
     const el = document.getElementById(id);
     el.style.borderColor = '#ef4444';
     el.placeholder = mesg;
@@ -34,3 +32,55 @@ export function escHtml(str) {
 
 
 export const fmt = (n) => '$' + n?.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+
+
+export function getMemoryUsage() {
+    if (!performance.memory) {
+        return null;
+    }
+
+    const formatBytes = (bytes) => {
+        const units = ['B', 'KB', 'MB', 'GB'];
+        let i = 0;
+
+        while (bytes >= 1024 && i < units.length - 1) {
+            bytes /= 1024;
+            i++;
+        }
+
+        return `${bytes.toFixed(2)} ${units[i]}`;
+    };
+
+    const {
+        usedJSHeapSize,
+        totalJSHeapSize,
+        jsHeapSizeLimit
+    } = performance.memory;
+
+    return {
+        used: formatBytes(usedJSHeapSize),
+        allocated: formatBytes(totalJSHeapSize),
+        limit: formatBytes(jsHeapSizeLimit)
+    };
+}
+
+
+export function darkMood() {
+
+    let element = document.body;
+    if(!element){
+        throw new Error("Element not found");
+    }
+
+    element.classList.toggle('dark-mode');
+    let dark_light = document.getElementById('dark_light');
+
+     if (element.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark")
+        dark_light.innerHTML = 'Day Mode';
+    } else {
+        localStorage.setItem("theme", "Light Mood")
+        dark_light.innerHTML = 'Night Mode';
+    }
+}

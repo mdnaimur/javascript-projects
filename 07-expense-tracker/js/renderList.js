@@ -1,7 +1,7 @@
 import { groupByMonth } from './Calculation.js';
+import { Categories } from './Categories.js';
 import { getExpenses } from './state.js';
-import { fmt, escHtml } from './utils.js';
-import { Categories } from './Categories.js'
+import { escHtml, fmt } from './utils.js';
 
 export function renderList() {
     // console.log(Object.entries);
@@ -15,19 +15,9 @@ export function renderList() {
         expenseEl.innerHTML = `<div class="empty">No expenses yet.<br>Add your first one above.</div>`;
         return;
     }
-    // console.log(expenseValue.map(items => { return items }));
+
 
     const groups = groupByMonth(expenseValue);
-
-    // for (const month in groups) {
-    //     console.log(month);
-    //     const items = groups[month];
-    //     for (const exp of items) {
-    //         console.log(exp);
-    //     }
-    // }
-
-
 
     expenseEl.innerHTML = Object.entries(groups)
         .map(([month, items]) =>

@@ -12,6 +12,17 @@ body {
     min-height: 100vh
 }
 
+
+/* dark mode start */
+
+.dark-mode {
+    background-color: hsl(195, 61%, 11%);
+    color: hsl(195, 60%, 80%);
+}
+
+
+/* dark mood end */
+
 .header {
     background: #fff;
     border-bottom: 1px solid #e5e7eb;
