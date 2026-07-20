@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Job Board</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>👨‍💻 Dev Job Board</h1>
+        <p>Live remote developer jobs — updated in real time</p>
+    </div>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+
+    <div class="app">
+        <div class="filters">
+            <div class="filter-field">
+                <label>Search</label>
+                <input type="text" id="searchQ" placeholder="React, Python, DevOps..." />
+            </div>
+            <div class="filter-field">
+                <label>Category</label>
+                <select id="catFilter">
+                    <option value="software-dev">Software Development</option>
+                    <option value="devops">DevOps / SysAdmin</option>
+                    <option value="design">Design</option>
+                    <option value="data">Data Science</option>
+                    <option value="qa">QA & Testing</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" onclick="loadJobs()">Search</button>
+            <button class="btn btn-outline" onclick="resetFilters()">Reset</button>
+        </div>
+
+        <div class="results-bar">
+            <span id="resultsLabel">Loading jobs...</span>
+            <span id="lastUpdated" style="font-size:12px"></span>
+        </div>
+
+        <div id="jobList" class="job-list"></div>
+    </div>
+
+
+    <!-- Detail panel -->
+    <div class="detail-backdrop" id="detailBackdrop">
+        <div class="detail-panel">
+            <div class="detail-header">
+                <div id="detailLogo" class="job-logo"></div>
+                <div style="flex:1;min-width:0">
+                    <div id="detailTitle" style="font-size:16px;font-weight:700"></div>
+                    <div id="detailCompany" style="font-size:13px;color:#6366f1;margin-top:2px"></div>
+                    <div id="detailMeta" class="job-meta" style="margin-top:6px"></div>
+                </div>
+                <button class="close-btn" onclick="closeDetail()">×</button>
+            </div>
+            <div class="detail-body" id="detailBody"></div>
+            <div class="detail-footer">
+                <a id="applyBtn" href="#" target="_blank" class="btn btn-primary" style="text-decoration:none">Apply Now
+                    →</a>
+                <button class="btn btn-outline" onclick="closeDetail()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>
